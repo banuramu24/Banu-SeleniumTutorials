@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" > <!-- //taken from the throwed exception. -->      
+<suite name="Test Suite" verbose="2" parallel="methods" thread-count="2"> <!-- //VIDEO 9 : [ParallelTesting] Executing TestCases in Parallel Fashion using testNG --> 
+<listeners>
+<listener class-name="testNG.ListenersExample"></listener>
+</listeners>
+
+<test name="Test Cases">
+
+            <!-- //VIDEO 8 : Parameterization in testNg? -->
+            
+<!-- <parameter name="Name" value="Duck"></parameter> -->
+
+            <!-- //VIDEO 7 : How to group your test cases in testNg? ->GroupingExample.java-->
+<!-- <groups>
+
+    <run>
+    <include name="Moto"></include>
+    <include name="Vivo"></include>
+    <exclude></exclude>
+    </run>
+
+</groups> -->
+<classes>
+<class name="testNG.SampleTestCase"></class>
+            <!-- //Example1 : Writing a test suite in an xml file -->
+<!-- <class name="testNG.DriveACar"></class>
+<class name="testNG.SampleTestCase"></class>
+<class name="testNG.SkipATestCase"></class>
+<class name="testNG.SuiteExample"></class> -->
+</classes>
+</test>
+</suite>
+
+<!-- VIDEO : 6 Writing a test suite in an xml file
+//Starting with testNG xml:
+//*It is not only for reporting,we can also create reports.
+//*index reports and emailable reports are the outstanding features in the testNG.
+//[verbose : It will give the in-depth analysis of every methods present in each class.It is a parameter
+//which indicates the level of information's.But now in this version it is reverse.If we dont give verbose it will give
+//the level of information's.If we give verbose it shows only totaltime taken.]
+//***So first,how is created the TestNG.xml file?
+//in Selenium Tutorials->r8 click->new->other->xml(in search box)->click xmlfile->
+//next->(testNG.xml)[name to be given]->finish.
+//...Writing a test suite in an xml file....
+//***why we use testNG xml?
+//Eg:If we have large number of classes, we cannot execute all the classes,one by one 
+//by giving rightclick->runas->java appl.
+//To execute (n) number of testcases in a single shot at a time we use testNG xml file.
+//In one Single Shot we execute Multiple TestCases.
+//***Why testNG is Benefits? It will automatically generates a report after the test suite execution is done.
+//Bcoz finally i need to send report to client,correct ah..
+//So goto Selenium Tuto->r8 click->refresh. I will get [test-output] folder by default.
+//Inside that folder i have (index.html) and (emailable-report) files.
+//Now open the (index.html)->openwith->webbrowser. It will give the in-depth details.
+//Illa enaku in-depth details vendam. email panra maari details irundhaa podhum means
+//I go for emailable-report.html. It will give the top-level info only. 
+//Basically a suite is a collection of testcases.
+//Then we have written testcases on multiple classes.
+//So,we use classes tag.
+//Inside classes we have neraya individual class.
+//How we define class name??
+//packagename.classname which is called fully qualified class name.
+//We can also have a single class in each test.
+//So run as -> testNG suite. why suite? bcoz it have so many testcases.
+//Generally suite and test should have name . so pls define it.
+//Always see the exception in the first line in testNG exception's.
+ -->
+ 
+ 
+<!-- //After this go for GroupingExample -->
